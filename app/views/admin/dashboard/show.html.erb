@@ -1,2 +1,15 @@
-<h1>Admin::Dashboard#show</h1>
-<p>Find me in app/views/admin/dashboard/show.html.erb</p>
+<header class="page-header">
+  <h1>Admin &raquo; Dashboard</h1>
+</header>
+
+<ul class="list-group">
+ <li class="list-group-item d-flex justify-content-between align-items-center">
+    # of Categories
+    <span class="badge badge-primary"><%= @num_of_categories%></span>
+  </li>
+
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    <%= link_to "# of Products", "/admin/products"%>
+    <span class="badge badge-primary "><%= @num_of_products%></span>
+  </li>
+</ul>
