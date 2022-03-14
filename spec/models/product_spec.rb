@@ -4,7 +4,7 @@ RSpec.describe Product, type: :model do
 
   describe 'Validations' do
 
-    it 'save product to database if all fields are valid' do
+    it 'saves a product to database if all fields are valid' do
       @category = Category.create(name: "Food")
       @product = Product.new(
         name: 'Apple',
@@ -14,7 +14,6 @@ RSpec.describe Product, type: :model do
       )
       @product.save
       expect(@product.valid?).to be true
-
     end
     
     it 'does not save a product that has no name' do
